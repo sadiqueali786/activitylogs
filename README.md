@@ -28,22 +28,21 @@ This project leverages Spatie's Laravel Activitylog and Laravel Permission packa
 
 1. Clone the repository:
 
-
+```bash
 git clone https://github.com/sadiqueali786/activitylogs.git
 cd activitylogs
-
 Install the required packages:
 
-
+bash
 composer require spatie/laravel-activitylog spatie/laravel-permission
 Publish the configuration files:
 
-
+bash
 php artisan vendor:publish --provider="Spatie\Activitylog\ActivitylogServiceProvider"
 php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
 Run the migrations:
 
-
+bash
 php artisan migrate
 Configuration
 Setting Up Roles and Permissions
@@ -52,11 +51,11 @@ Define your roles and permissions in the config/permission.php file.
 Configuring Activity Log
 You can customize the activity log settings in the config/activitylog.php file.
 
-
+Usage
 Assigning Roles and Permissions
 You can assign roles and permissions to users:
 
-
+php
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 
@@ -68,7 +67,7 @@ $user->assignRole('writer');
 Logging Activities
 Log activities in your controllers or services:
 
-
+php
 use Spatie\Activitylog\Models\Activity;
 
 activity()
@@ -78,7 +77,7 @@ activity()
 Retrieving Activity Logs
 Retrieve logs for a model or user:
 
-
+php
 $activities = Activity::where('causer_id', $user->id)->get();
 Contributing
 We welcome contributions! Please follow these steps to contribute:
