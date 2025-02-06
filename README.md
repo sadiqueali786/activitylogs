@@ -28,7 +28,7 @@ This project leverages Spatie's Laravel Activitylog and Laravel Permission packa
 
 1. Clone the repository:
 
-
+```bash
 git clone https://github.com/sadiqueali786/activitylogs.git
 
 2. Migrate and Feel free to customize this further based on your project's specific needs! 😊:
